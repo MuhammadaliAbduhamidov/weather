@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s linear;
+}
+:root {
+  --main-color: #43affc;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--main-color);
+  height: 100vh;
+}
+.weather-body {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  border-radius: 7px;
+}
+.weather-text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  width: 100%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.131);
+  cursor: pointer;
+}
+.weather-text i {
+  color: var(--main-color);
+  padding: 20px 0 10px;
+  font-size: 20px;
+}
+.weather-text h1 {
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: 600;
+  padding: 20px 0 10px;
+}
+
+.form {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.next {
+  background: rgba(169, 8, 8, 0.3);
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 7px;
+  display: none;
+}
+.next.active {
+  background: red;
+  display: block;
+  color: #fff;
+}
+.next b {
+  color: #123;
+  font-weight: 500;
+}
+.bg {
+  background: rgb(188, 188, 255);
+}
+.form input {
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.131);
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.form input:focus {
+  border: 2px solid var(--main-color);
+}
+.form .or {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.131);
+  position: relative;
+  margin: 20px 0;
+}
+.form span {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.4);
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -12px;
+  width: 50px;
+  text-align: center;
+}
+
+.form button {
+  color: #fff;
+  background: var(--main-color);
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  padding: 12px 30px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.location {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 7px;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.temp span {
+  font-size: 60px;
+  font-weight: 600;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.climate img {
+  width: 150px;
+  padding: 15px 0;
+}
+.weather-end {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 2px solid rgba(0, 0, 0, 0.131);
+  width: 100%;
+  margin-top: 15px;
+}
+.feels {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-right: 2px solid rgba(0, 0, 0, 0.131);
+  padding-right: 16%;
+}
+.feels i {
+  font-size: 50px;
+  color: var(--main-color);
+}
+.feels .temp span {
+  font-size: 30px;
+}
+.fa-location-dot {
+  font-size: 20px;
+  color: var(--main-color);
+}
+.humidity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.humidity-end span {
+  font-size: 30px;
+  font-weight: 600;
+}
+.humidity img {
+  width: 50px;
+}
+@media (max-width: 768px) {
+  .climate img {
+    width: 130px;
+    padding: 0 0;
+  }
+  .temp span {
+    font-size: 50px;
+  }
+  .feels .temp span {
+    font-size: 25px;
+  }
+  .humidity-end span {
+    font-size: 25px;
+  }
+}
+@media (max-width: 500px) {
+  .weather-body {
+    width: 350px;
+  }
+  .feels i {
+    font-size: 40px;
+  }
+  .humidity img {
+    width: 40px;
+  }
+}
+@media (max-width: 350px) {
+  .weather-body {
+    width: 300px;
+  }
+  .climate img {
+    width: 100px;
+  }
+  .temp span {
+    font-size: 40px;
+  }
+  .feels .temp span {
+    font-size: 20px;
+  }
+  .humidity-end span {
+    font-size: 20px;
+  }
+}
